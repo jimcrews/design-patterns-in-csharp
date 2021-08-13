@@ -6,7 +6,8 @@ namespace consoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Using the Strategy Pattern to implement the various behaviors of ducks
+            SimUDuck.Run();
         }
     }
 }
