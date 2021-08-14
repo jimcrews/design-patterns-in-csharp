@@ -1,6 +1,6 @@
 ## Design Principle
 
-<i><b>The Strategy Pattern</b> defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.</>
+<i><b>The Strategy Pattern</b> defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.</i>
 
 This app is using the Strategy Pattern to implement the various behaviors of ducks. Therefore, the duck behavior has been encapsulated into its own set of classes that can be easily expanded and changed, even at runtime if needed.
 
