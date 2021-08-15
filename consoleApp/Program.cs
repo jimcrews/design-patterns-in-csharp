@@ -7,7 +7,9 @@ namespace consoleApp
         static void Main(string[] args)
         {
             // Using the Strategy Pattern to implement the various behaviors of ducks
-            SimUDuck.Run();
+            // SimUDuck.Run();
+
+            WeatherMonitor.Run();
         }
     }
 }

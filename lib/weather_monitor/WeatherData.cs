@@ -1,39 +1,53 @@
+using System.Collections.Generic;
 using lib.weather_monitor.Observers;
 
 namespace lib.weather_monitor
 {
-    class WeatherData : ISubject
+    public class WeatherData : ISubject
     {
-        public void NotifyObserver()
+        private List<IObserver> observers;
+        private float temperature;
+        private float humidity;
+        private float pressure;
+
+        public WeatherData()
         {
-            throw new System.NotImplementedException();
+            observers = new List<IObserver>();
+        }
+
+        public void SetMeasurements(float temperature, float humidity, float pressure)
+        {
+            this.temperature = temperature;
+            this.humidity = humidity;
+            this.pressure = pressure;
+            NotifyObservers();
+        }
+
+        public void NotifyObservers()
+        {
+            foreach (IObserver observer in observers)
+            {
+                observer.Update();
+            }
         }
         public void RegisterObserver(IObserver o)
         {
-            throw new System.NotImplementedException();
+            observers.Add(o);
         }
 
         public void RemoveObserver(IObserver o)
         {
-            throw new System.NotImplementedException();
+            observers.Remove(o);
         }
-        public void GetTemperature()
+
+        public float GetTemperature()
         {
-
+            return temperature;
         }
-        public void GetHumidity()
+        public float GetHumidity()
         {
-
+            return humidity;
         }
-        public void GetPressure()
-        {
-
-        }
-        public void MeasurementsChanged()
-        {
-
-        }
-
 
     }
 }

@@ -1,6 +1,6 @@
 namespace lib.weather_monitor.Observers
 {
-    interface IObserver
+    public interface IObserver
     {
         void Update();
     }
